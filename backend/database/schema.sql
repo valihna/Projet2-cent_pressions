@@ -3,4 +3,4 @@ create table item (
   title varchar(255) not null
 );
 
-INSERT INTO item (title) VALUES ("100Pressions"),("Catégories"), ("Prix");
+INSERT INTO item (title) VALUES ("100Pressions"), ("Catégories"), ("Prix");
