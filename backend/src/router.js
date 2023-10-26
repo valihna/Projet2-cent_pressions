@@ -1,6 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
+const client = require("../database/client");
 
 /* ************************************************************************* */
 // Define Your API Routes Here
@@ -10,7 +11,15 @@ const router = express.Router();
 
 // Route to get a list of items
 router.get("/items", (req, res) => {
-  res.send("bonjour toto");
+  client
+    .query("SELECT * FROM item")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 });
 
 // Route to get a specific item by ID
