@@ -3,9 +3,14 @@ import "./App.css";
 
 function App() {
   const load = () => {
-    axios.get("http://localhost:3310/api/items").then((items) => {
-      console.info(items);
-    });
+    axios
+      .get("http://localhost:3310/api/items")
+      .then((items) => {
+        console.info(items.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
