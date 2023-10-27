@@ -1,10 +1,13 @@
+import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
 function App() {
-  const load = () => {
+  const [id, setId] = useState(0);
+
+  const loadOneBeer = () => {
     axios
-      .get("http://localhost:3310/api/items")
+      .get(`http://localhost:3310/api/beers/${id}`)
       .then((items) => {
         console.info(items.data);
       })
@@ -15,9 +18,17 @@ function App() {
 
   return (
     <div className="App">
-      <button type="button" onClick={load}>
-        Load
-      </button>
+      <form
+        onSubmit={(event) => {
+          loadOneBeer();
+          event.preventDefault();
+        }}
+      >
+        <label>
+          <input type="text" onChange={(e) => setId(e.target.value)} />
+        </label>
+        <input type="submit" />
+      </form>
     </div>
   );
 }
