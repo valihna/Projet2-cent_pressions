@@ -13,8 +13,6 @@ const beerControllers = require("./controllers/beerControllers");
 
 router.get("/beers", beerControllers.getBeers);
 
-router.get("/beers/:id", beerControllers.getBeersById);
-
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
 
