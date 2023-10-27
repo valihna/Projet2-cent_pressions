@@ -1,7 +1,3 @@
-
-
-
-
 create table beer (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
   type VARCHAR(50) NOT NULL,
