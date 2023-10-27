@@ -8,6 +8,7 @@ const client = require("../database/client");
 /* ************************************************************************* */
 
 // Import itemControllers module for handling item-related operations
+const beerControllers = require("./controllers/beerControllers");
 
 // Route to get a list of items
 router.get("/items", (req, res) => {
@@ -22,17 +23,9 @@ router.get("/items", (req, res) => {
     });
 });
 
-router.get("/beers", (req, res) => {
-  client
-    .query("SELECT * FROM beers")
-    .then((result) => {
-      res.status(200).json(result[0]);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
-});
+router.get("/beers", beerControllers.getBeers);
+
+router.get("/beers/:id", beerControllers.getBeersById);
 
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
