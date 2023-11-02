@@ -7,7 +7,7 @@ const getBeersById = (req, res) => {
     .query("SELECT * FROM beer WHERE id = ?", [id])
     .then((result) => {
       if (result[0] != null) {
-        res.status(200).json(result[0]);
+        res.status(200).json(result);
       } else {
         res.sendStatus(404);
       }

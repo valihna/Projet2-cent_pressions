@@ -2,14 +2,22 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+import BeerCard from "./components/BeerCard";
+
 function App() {
   const [id, setId] = useState(0);
+  const [selectedBeer, setSelectedBeer] = useState("");
 
   const loadOneBeer = () => {
     axios
       .get(`http://localhost:3310/api/beers/${id}`)
       .then((items) => {
-        console.info(items.data);
+        console.info(items.data[0][0]);
+        const beer = {
+          name: items.data[0][0].name,
+          picture: items.data[0][0].image_url,
+        };
+        setSelectedBeer(beer);
       })
       .catch((err) => {
         console.error(err);
@@ -29,6 +37,7 @@ function App() {
         </label>
         <input type="submit" />
       </form>
+      <BeerCard name={selectedBeer.name} picture={selectedBeer.picture} />
     </div>
   );
 }
