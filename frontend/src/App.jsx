@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-import BeerCard from "./components/BeerCard";
+import BeerInfo from "./components/BeerInfo";
 
 function App() {
   const [id, setId] = useState(0);
@@ -37,7 +37,7 @@ function App() {
         </label>
         <input type="submit" />
       </form>
-      <BeerCard name={selectedBeer.name} picture={selectedBeer.picture} />
+      <BeerInfo name={selectedBeer.name} picture={selectedBeer.picture} />
     </div>
   );
 }

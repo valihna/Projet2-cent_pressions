@@ -1,0 +1,14 @@
+.beerInfo {
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+}
+
+.background {
+  background-color: darkgrey;
+  height: max-content;
+}
+
+.beerInfoImage {
+  height: 30rem;
+}
