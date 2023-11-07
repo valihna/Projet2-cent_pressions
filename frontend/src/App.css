@@ -1,0 +1,28 @@
+.beer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.beer-item {
+  background-color: rgb(240, 238, 81);
+  width: 13rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px black;
+}
+.beer-item img {
+  width: 60px;
+  height: auto;
+}
+@media screen and (min-width: 640px) {
+  .beer-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
