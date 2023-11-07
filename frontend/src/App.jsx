@@ -8,7 +8,7 @@ function App() {
   axios
     .get("http://localhost:3310/api/beers")
     .then((response) => {
-      setBeers(response.data); // mise à jour de l'état beers avec les données récupérées
+      setBeers(response.data);
     })
     .catch((err) => {
       console.error(err);

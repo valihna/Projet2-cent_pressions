@@ -1,13 +1,11 @@
 import React from "react";
+import BeerCard from "./BeerCard";
 
 function BeerList({ beers }) {
   return (
     <div className="beer-list">
       {beers.map((beer) => (
-        <div key={beer.id} className="beer-item">
-          <h3>{beer.name}</h3>
-          <img src={beer.image_url} alt={beer.name} />
-        </div>
+        <BeerCard key={beer.id} beer={beer} />
       ))}
     </div>
   );
