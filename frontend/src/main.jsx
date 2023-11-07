@@ -1,14 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import Beers from "./pages/Beers";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/beers/:id",
+    element: <Beers />,
+    loader: ({ params }) => {
+      return axios
+        .get(`http://localhost:3310/api/beers/${params.id}`)
+        .then((response) => {
+          return response.data;
+        });
+    },
   },
 ]);
 
