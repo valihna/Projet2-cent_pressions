@@ -144,11 +144,13 @@ body {
   }
 
   .beer-info-title h2 {
+    margin: auto;
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 
   .beer-info-title h3 {
+    margin: auto;
     font-size: 2rem;
     font-weight: lighter;
     font-style: italic;
