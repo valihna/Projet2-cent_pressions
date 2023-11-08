@@ -1,8 +1,18 @@
 import React from "react";
 
 function BeerCard({ beer }) {
+  const typeColors = {
+    Braun: "brown-color",
+    IPA: "ipa-color",
+    Black: "black-color",
+    Blonde: "blonde-color",
+    Abbey: "abbey-color",
+  };
+
+  const colorClass = typeColors[beer.type];
+
   return (
-    <div className="beer-item">
+    <div className={`beer-item ${colorClass}`}>
       <img src={beer.image_url} alt={beer.name} />
       <div className="name_type">
         <h3 className="name">{beer.name}</h3>
