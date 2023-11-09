@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Beers />,
     loader: ({ params }) => {
       return axios
-        .get(`http://localhost:3310/api/beers/${params.id}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/beers/${params.id}`)
         .then((response) => {
           return response.data;
         });
