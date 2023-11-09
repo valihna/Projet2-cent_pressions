@@ -1,19 +1,15 @@
 import React from "react";
-
+/* import { HiOutlineInformationCircle } from "react-icons/hi";
+ */
 function BeerCard({ beer }) {
-  const typeColors = {
-    Braun: "brown-color",
-    IPA: "ipa-color",
-    Black: "black-color",
-    Blonde: "blonde-color",
-    Abbey: "abbey-color",
-  };
-
-  const colorClass = typeColors[beer.type];
-
   return (
-    <div className={`beer-item ${colorClass}`}>
-      <img src={beer.image_url} alt={beer.name} />
+    <div className={`beer-item ${beer.type.toLowerCase()}-color`}>
+      <div className="info_img">
+        {/*         <HiOutlineInformationCircle className="info" />
+         */}{" "}
+        <img className="img" src={beer.image_url} alt={beer.name} />
+        {/* <HiOutlineInformationCircle className="fav" /> */}
+      </div>
       <div className="name_type">
         <h3 className="name">{beer.name}</h3>
         <p className="type">{beer.type}</p>

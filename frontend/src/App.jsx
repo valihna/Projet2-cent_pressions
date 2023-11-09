@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import BeerList from "./components/BeerList";
+import Title from "./components/Title";
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -15,8 +16,11 @@ function App() {
     });
 
   return (
-    <div className="App">
-      <BeerList beers={beers} />
+    <div>
+      <Title />
+      <div className="App">
+        <BeerList beers={beers} />
+      </div>
     </div>
   );
 }
