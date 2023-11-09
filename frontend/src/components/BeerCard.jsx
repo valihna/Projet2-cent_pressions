@@ -1,14 +1,10 @@
 import React from "react";
-/* import { HiOutlineInformationCircle } from "react-icons/hi";
- */
+
 function BeerCard({ beer }) {
   return (
     <div className={`beer-item ${beer.type.toLowerCase()}-color`}>
       <div className="info_img">
-        {/*         <HiOutlineInformationCircle className="info" />
-         */}{" "}
         <img className="img" src={beer.image_url} alt={beer.name} />
-        {/* <HiOutlineInformationCircle className="fav" /> */}
       </div>
       <div className="name_type">
         <h3 className="name">{beer.name}</h3>
