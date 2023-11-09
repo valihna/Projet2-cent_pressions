@@ -1,20 +1,3 @@
-:root {
-  --blonde-bg-color: #f1d18a;
-  --ipa-bg-color: #f2ba46;
-  --abbey-bg-color: #fcae54d8;
-  --braun-bg-color: #8a5416d8;
-  --black-bg-color: #351e04a6;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: #f8e0e0;
-}
-
 .beer-info {
   display: flex;
   flex-direction: column;
@@ -39,26 +22,6 @@ body {
 .beer-info-title-left {
   display: flex;
   flex-direction: column;
-}
-
-.bg-IPA {
-  background-color: var(--ipa-bg-color);
-}
-
-.bg-Blonde {
-  background-color: var(--blonde-bg-color);
-}
-
-.bg-Abbey {
-  background-color: var(--abbey-bg-color);
-}
-
-.bg-Braun {
-  background-color: var(--braun-bg-color);
-}
-
-.bg-Black {
-  background-color: var(--black-bg-color);
 }
 
 .beer-info-title h2 {
@@ -90,21 +53,6 @@ body {
   padding: 2rem;
 }
 
-.beer-info-content {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.beer-info-content-header {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.beer-info-content-value {
-  text-align: justify;
-  margin-bottom: 1rem;
-}
-
 .beer-info-body-right {
   display: none;
 }
@@ -117,7 +65,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 722px) {
+@media screen and (min-width: 1024px) {
   .beer-info {
     width: 75%;
   }
@@ -154,13 +102,6 @@ body {
     font-size: 2rem;
     font-weight: lighter;
     font-style: italic;
-  }
-
-  .beer-info-content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
   }
 
   .beer-info-body-right {
