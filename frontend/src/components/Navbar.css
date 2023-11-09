@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/nav.png") repeat-x;
+  height: 10rem;
+}
+
+.navbar-header {
+  margin-bottom: 2rem;
+}
+
+.title-site {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.logo-site {
+  color: white;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+.home {
+  color: white;
+}
+.logo-cart {
+  color: white;
+}
