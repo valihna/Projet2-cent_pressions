@@ -1,10 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .navbar {
-  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,23 +12,27 @@
 }
 
 .title-site {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.logo-site {
+  font-size: 3rem;
   color: white;
 }
 
 .navbar-menu {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  background: url("../assets/nav.png") repeat-x;
+}
+
 .home {
   color: white;
-}
-.logo-cart {
-  color: white;
+  text-decoration: none;
 }
