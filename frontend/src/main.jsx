@@ -1,4 +1,5 @@
 import React from "react";
+
 import ReactDOM from "react-dom/client";
 import axios from "axios";
 
@@ -11,6 +12,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: () => {
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/beers`)
+        .then((response) => {
+          return response.data;
+        });
+    },
   },
   {
     path: "/beers/:id",

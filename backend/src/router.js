@@ -10,6 +10,7 @@ const router = express.Router();
 const beerControllers = require("./controllers/beerControllers");
 
 // Route to get a list of items
+router.get("/beers", beerControllers.getBeers);
 router.get("/beers/:id", beerControllers.getBeersById);
 
 // Route to get a specific item by ID
