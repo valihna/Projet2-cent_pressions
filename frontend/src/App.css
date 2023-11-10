@@ -32,3 +32,11 @@ body {
 .black-color {
   background-color: var(--black-bg-color);
 }
+.title {
+  background-color: #ebbe5c;
+  height: 70px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

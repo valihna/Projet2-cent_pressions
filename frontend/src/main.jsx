@@ -12,9 +12,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     loader: () => {
-      return axios.get("http://localhost:3310/api/beers").then((response) => {
-        return response.data;
-      });
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/beers`)
+        .then((response) => {
+          return response.data;
+        });
     },
   },
 ]);
