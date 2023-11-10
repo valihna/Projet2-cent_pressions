@@ -1,5 +1,6 @@
 import React from "react";
 import BeerCard from "./BeerCard";
+import "./BeerList.css";
 
 function BeerList({ beers }) {
   return (

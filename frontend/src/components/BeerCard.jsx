@@ -1,4 +1,5 @@
 import React from "react";
+import "./BeerCard.css";
 
 function BeerCard({ beer }) {
   return (
