@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom";
-import "./App.css";
+
 import BeerList from "./components/BeerList";
 import Title from "./components/Title";
+
+import "./App.css";
 
 function App() {
   const beers = useLoaderData();
