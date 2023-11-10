@@ -37,14 +37,7 @@
   margin-bottom: 0;
   font-style: italic;
 }
-.title {
-  background-color: #ebbe5c;
-  height: 70px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .abv_volume {
   width: 10rem;
   height: 2rem;
