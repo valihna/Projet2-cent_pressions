@@ -1,8 +1,6 @@
 import React from "react";
-
 import ReactDOM from "react-dom/client";
 import axios from "axios";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
