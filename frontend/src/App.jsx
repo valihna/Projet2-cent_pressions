@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import BeerList from "./components/BeerList";
 import Title from "./components/Title";
+import NavBar from "./components/Navbar";
+
 import SideBar from "./components/SideBar";
 import "./App.css";
 
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <Title />
 
       <div className="app">
