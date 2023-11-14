@@ -1,0 +1,8 @@
+.input_type {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.label {
+  padding: 0.5rem;
+}

@@ -1,8 +1,10 @@
-import React from "react";
-import "./BeerCard.css";
-import { Link } from "react-router-dom";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { HiOutlineInformationCircle } from "react-icons/hi";
+
+import React from "react";
+import { Link } from "react-router-dom";
+
+import "./BeerCard.css";
 
 function BeerCard({ beer }) {
   return (
