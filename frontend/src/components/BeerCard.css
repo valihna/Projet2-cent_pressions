@@ -23,6 +23,12 @@
 }
 .info {
   margin-top: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+.fav {
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 .name {
   margin: 5px;
