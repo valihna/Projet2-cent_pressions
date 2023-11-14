@@ -21,7 +21,7 @@ function NavBar() {
   return (
     <div className="navbar">
       <div className="navbar-header">
-        <h1 className="title-site">CENT PRESSIONS</h1>
+        <h1 className="navbar-title-site">CENT PRESSIONS</h1>
       </div>
       <div className={isScrolled ? "navbar-menu sticky" : "navbar-menu"}>
         <Link
