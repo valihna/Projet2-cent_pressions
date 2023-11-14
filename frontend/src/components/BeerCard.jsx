@@ -2,6 +2,7 @@ import React from "react";
 import "./BeerCard.css";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-unresolved: 2
 import { HiOutlineInformationCircle } from "react-icons/hi";
 
 function BeerCard({ beer }) {
