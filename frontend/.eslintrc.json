@@ -34,6 +34,7 @@
       {
         "assert": "either"
       }
-    ]
+    ],
+    "import/no-unresolved": [2, { "devDependencies": true }],
   }
 }
