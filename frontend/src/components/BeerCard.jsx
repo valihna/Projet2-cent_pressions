@@ -1,10 +1,16 @@
 import React from "react";
 import "./BeerCard.css";
+import { Link } from "react-router-dom";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { HiOutlineInformationCircle } from "react-icons/hi";
 
 function BeerCard({ beer }) {
   return (
     <div className={`beer-item ${beer.type.toLowerCase()}-color`}>
       <div className="info_img">
+        <Link to={`/beers/${beer.id}`}>
+          <HiOutlineInformationCircle className="info" />
+        </Link>
         <img className="img" src={beer.image_url} alt={beer.name} />
       </div>
       <div className="name_type">
