@@ -8,7 +8,7 @@ function NavBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 150);
+      setIsScrolled(scrollTop > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,7 +24,13 @@ function NavBar() {
         <h1 className="title-site">CENT PRESSIONS</h1>
       </div>
       <div className={isScrolled ? "navbar-menu sticky" : "navbar-menu"}>
-        <Link className="home" to="/">
+        <Link
+          className="home"
+          to="/"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <h2>HOME</h2>
         </Link>
       </div>
