@@ -1,5 +1,4 @@
-// SideBar.jsx
-
+import "./SideBar.css";
 import React from "react";
 import Type from "./Types";
 

@@ -1,4 +1,9 @@
 .side {
-  background-color: aqua;
-  width: 140rem;
+  background: url("../assets/image-navbar.png");
+  width: 13rem;
+  color: aliceblue;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  bottom: 0;
 }
