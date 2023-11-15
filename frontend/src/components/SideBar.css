@@ -1,9 +1,19 @@
 .side {
   background: url("../assets/image-navbar.png");
-  width: 13rem;
+  width: 6.5rem;
   color: aliceblue;
-  position: fixed;
-  top: 4rem;
+  position: sticky;
   left: 0;
+  top: 4rem; /* La distance à partir du haut où la barre latérale doit commencer à se fixer */
+  height: calc(100vh - 4rem);
+
   bottom: 0;
+}
+.tout-input {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 720px) {
+  .side {
+    width: 13rem;
+  }
 }

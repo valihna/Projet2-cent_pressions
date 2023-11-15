@@ -11,9 +11,15 @@ function SideBar({ onFilterChange }) {
 
   return (
     <div className="side">
-      {types.map((type) => (
-        <Type key={type} type={type} onFilterChange={handleTypeFilterChange} />
-      ))}
+      <div className="tout-input">
+        {types.map((type) => (
+          <Type
+            key={type}
+            type={type}
+            onFilterChange={handleTypeFilterChange}
+          />
+        ))}
+      </div>
     </div>
   );
 }

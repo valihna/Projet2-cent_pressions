@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
-  margin: auto;
 }
 @media screen and (min-width: 720px) {
   .beer-list {
@@ -11,5 +9,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 13rem;
   }
 }
