@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import BeerList from "./components/BeerList";
 import Title from "./components/Title";
 import NavBar from "./components/Navbar";
-
 import SideBar from "./components/SideBar";
 import "./App.css";
 
@@ -21,10 +20,16 @@ function App() {
     }
   };
 
-  const filteredBeers =
-    selectedTypes.length > 0
-      ? allBeers.filter((beer) => selectedTypes.includes(beer.type))
-      : allBeers;
+  let groupedBeers;
+
+  if (selectedTypes.length > 0) {
+    groupedBeers = selectedTypes.reduce((grouped, type) => {
+      const typeBeers = allBeers.filter((beer) => beer.type === type);
+      return grouped.concat(typeBeers);
+    }, []);
+  } else {
+    groupedBeers = allBeers;
+  }
 
   return (
     <div>
@@ -32,7 +37,7 @@ function App() {
       <Title />
 
       <div className="app">
-        <BeerList beers={filteredBeers} />
+        <BeerList beers={groupedBeers} />
         <SideBar onFilterChange={handleFilterChange} />
       </div>
     </div>
