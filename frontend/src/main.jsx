@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Basket from "./pages/Basket";
 
 import App from "./App";
 import Beers from "./pages/Beers";
@@ -27,6 +28,16 @@ const router = createBrowserRouter([
         .then((response) => {
           return response.data;
         });
+    },
+  },
+  {
+    path: "/basket",
+    element: <Basket />,
+    loader: () => {
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/basket?beers=1|5|25`)
+        .then((res) => res.data)
+        .catch((err) => console.error(err));
     },
   },
 ]);
