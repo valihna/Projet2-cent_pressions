@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import "./BeerInfo.css";
 
 import BeerInfoContent from "./BeerInfoContent";
+import FavButton from "./FavButton";
 
 function BeerInfo() {
   const selectedBeer = useLoaderData();
@@ -21,6 +22,9 @@ function BeerInfo() {
           src={selectedBeer.image_url}
           alt={selectedBeer.name}
         />
+        <div className="beer-info-fav">
+          <FavButton beerId={selectedBeer.id} />
+        </div>
       </div>
       <div className="beer-info-body">
         <div className="beer-info-body-left">

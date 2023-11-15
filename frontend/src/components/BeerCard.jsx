@@ -1,8 +1,11 @@
 import React from "react";
 import "./BeerCard.css";
 import { Link } from "react-router-dom";
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { HiOutlineInformationCircle } from "react-icons/hi";
+
+import FavButton from "./FavButton";
 
 function BeerCard({ beer }) {
   return (
@@ -12,6 +15,7 @@ function BeerCard({ beer }) {
           <HiOutlineInformationCircle className="info" />
         </Link>
         <img className="img" src={beer.image_url} alt={beer.name} />
+        <FavButton beerId={beer.id} />
       </div>
       <div className="name_type">
         <h3 className="name">{beer.name}</h3>

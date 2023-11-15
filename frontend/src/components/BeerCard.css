@@ -11,33 +11,35 @@
   background-size: 100% 20%;
   background-repeat: no-repeat;
 }
+
 .beer-item img {
   margin-top: 8px;
   width: auto;
   height: 150px;
 }
+
 .info_img {
   display: flex;
   justify-content: space-around;
   width: 90%;
 }
+
 .info {
   margin-top: 1rem;
   font-size: 2rem;
   color: black;
 }
-.fav {
-  margin-top: 1rem;
-  font-size: 2rem;
-}
+
 .name {
   margin: 5px;
 }
+
 .type {
   margin: 0;
   display: flex;
   justify-content: center;
 }
+
 .tagline {
   margin-top: 5px;
   margin-bottom: 0;
