@@ -30,11 +30,15 @@
   width: 100%;
   padding: 5px;
 }
+Textarea:invalid {
+  border: red solid;
+}
 label input {
   box-sizing: border-box;
   width: 100%;
   padding: 5px;
   margin-bottom: 5%;
 }
-label {
+Input:invalid {
+  border: red solid;
 }

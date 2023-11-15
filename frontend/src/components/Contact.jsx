@@ -7,11 +7,16 @@ function Contact() {
       <form>
         <label>
           Lastname
-          <input type="text" name="lastname" placeholder="Last name" />
+          <input type="text" name="lastname" placeholder="Last name" required />
         </label>
         <label>
           Firstname
-          <input type="text" name="firstname" placeholder="First name" />
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First name"
+            required
+          />
         </label>
         <label>
           Subject
@@ -19,6 +24,7 @@ function Contact() {
             type="text"
             name="subject"
             placeholder="The subject of your message"
+            required
           />
         </label>
 
@@ -29,6 +35,7 @@ function Contact() {
             name="email"
             placeholder="Your email"
             className="contactInput"
+            required
           />
         </label>
 
@@ -38,6 +45,7 @@ function Contact() {
             className="contactTextarea"
             name="subject"
             placeholder="Your message"
+            required
           />
         </label>
         <div className="contactBtn">
