@@ -1,8 +1,7 @@
 import { useLoaderData } from "react-router-dom";
-
+import NavBar from "./Navbar";
 import "./BasketCart.css";
 
-import ItemCart from "./ItemCart";
 import Button from "./Button";
 
 // const beersInBasket = [
@@ -25,10 +24,9 @@ function BasketCart() {
   const cart = useLoaderData();
 
   return (
-    <div className="">
+    <div className="basketBody">
       <div>
-        <ItemCart />
-        <Button />
+        <NavBar />
       </div>
       <div>
         <h2 className="basket">My Cart</h2>
@@ -36,16 +34,24 @@ function BasketCart() {
 
       {cart.map((beer) => (
         <div key={beer.beerId} className="beerOne">
-          <h3 className="name">{beer.name}</h3>
-          <p className="price">${beer.price_per_liter}</p>
-          <p className="sous-total">Sous-total</p>
-          <img src={beer.image_url} alt={beer.name} />
+          <div className="beerOneLeft">
+            <img src={beer.image_url} alt={beer.name} />
+          </div>
+          <div className="beerOneRight">
+            <h3 className="name">{beer.name}</h3>
+            <p className="price">${beer.price_per_liter}</p>
+            <p className="sous-total">Sous-total</p>
+          </div>
         </div>
       ))}
-
-      <div className="footer">
-        <p className="number-of-items">Number of items</p>
-        <p className="total">Total</p>
+      <div className="basketFooter">
+        <div className="totalContainer">
+          <p className="total">Total</p>
+          <span>$</span>
+          <div className="basFooter">
+            <Button />
+          </div>
+        </div>
       </div>
     </div>
   );
