@@ -44,3 +44,8 @@ body {
   align-items: center;
   font-size: 2rem;
 }
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
