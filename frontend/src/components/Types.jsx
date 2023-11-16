@@ -11,7 +11,7 @@ function Type({ type, onFilterChange }) {
   };
 
   return (
-    <div className="input_type">
+    <div className="input-type">
       <input
         type="checkbox"
         checked={isChecked}

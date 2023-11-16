@@ -11,8 +11,8 @@ function SideBar({ onFilterChange }) {
 
   return (
     <div className="side">
-      <div className="all_input">
-        <h3 className="types_of_beer">types of beers :</h3>
+      <div className="all-input">
+        <h3 className="types-of-beer">Types of beers :</h3>
         {types.map((type) => (
           <Type
             key={type}

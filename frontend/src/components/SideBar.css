@@ -8,10 +8,10 @@
   height: calc(100vh - 4rem);
   bottom: 0;
 }
-.types_of_beer {
+.types-of-beer {
   margin: 1.3rem;
 }
-.all_input {
+.all-input {
   margin-top: 3rem;
 }
 @media screen and (min-width: 720px) {
