@@ -1,18 +1,17 @@
 .side {
-  background: url("../assets/image-navbar.png");
+  background: url("../public/image-navbar.png");
   width: 6.5rem;
   color: aliceblue;
   position: sticky;
   left: 0;
   top: 4rem;
   height: calc(100vh - 4rem);
-
   bottom: 0;
 }
 .types_of_beer {
   margin: 1.3rem;
 }
-.tout-input {
+.all_input {
   margin-top: 3rem;
 }
 @media screen and (min-width: 720px) {

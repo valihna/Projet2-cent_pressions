@@ -20,16 +20,17 @@ function App() {
     }
   };
 
-  let groupedBeers;
+  const getSelection = () => {
+    const selection = allBeers.filter(
+      (beer) => selectedTypes.length === 0 || selectedTypes.includes(beer.type)
+    );
 
-  if (selectedTypes.length > 0) {
-    groupedBeers = selectedTypes.reduce((grouped, type) => {
-      const typeBeers = allBeers.filter((beer) => beer.type === type);
-      return grouped.concat(typeBeers);
-    }, []);
-  } else {
-    groupedBeers = allBeers;
-  }
+    return selectedTypes.length > 0
+      ? selection.sort((a, b) => {
+          return a.type > b.type ? -1 : 1;
+        })
+      : selection;
+  };
 
   return (
     <div>
@@ -37,7 +38,7 @@ function App() {
       <Title />
 
       <div className="app">
-        <BeerList beers={groupedBeers} />
+        <BeerList beers={getSelection()} />
         <SideBar onFilterChange={handleFilterChange} />
       </div>
     </div>

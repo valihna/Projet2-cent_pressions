@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../assets/image-navbar.png");
+  background: url("../public/image-navbar.png");
   height: 10rem;
 }
 
@@ -29,7 +29,7 @@
   width: 100%;
   top: 0;
   height: 4rem;
-  background: url("../assets/image-navbar.png");
+  background: url("../public/image-navbar.png");
 }
 
 .home {
