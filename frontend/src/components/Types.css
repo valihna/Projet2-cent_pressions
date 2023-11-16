@@ -1,0 +1,11 @@
+.input_type {
+  margin: 1rem;
+}
+.label {
+  padding: 0.3rem;
+}
+@media screen and (min-width: 720px) {
+  .input_type {
+    margin: 3rem;
+  }
+}
