@@ -36,6 +36,7 @@
   box-shadow: 0px 0px 10px 5px black;
   border-radius: 10px;
   padding: 5rem;
+  margin: 3rem;
 }
 
 .beerOneLeft {
@@ -71,5 +72,6 @@
 }
 
 .basButton {
-  margin: top 10px;
+  margin-top: 10px;
+  margin: auto;
 }
