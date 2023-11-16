@@ -18,7 +18,7 @@ function BeerCard({ beer }) {
 
   return (
     <div className={`beer-item ${beer.type.toLowerCase()}-color`}>
-      <div className="info_img">
+      <div className="info-img">
         <Link to={`/beers/${beer.id}`} onClick={scrollToTop}>
           <HiOutlineInformationCircle className="info" />
         </Link>
@@ -30,7 +30,7 @@ function BeerCard({ beer }) {
         <p className="type">{beer.type}</p>
       </div>
       <p className="tagline">"{beer.tagline}"</p>
-      <div className="abv_volume">
+      <div className="abv-volume">
         <p className="abv">{beer.abv}%</p>
         <p className="volume">{beer.volume_value}L</p>
       </div>

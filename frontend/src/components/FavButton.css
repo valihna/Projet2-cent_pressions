@@ -1,9 +1,6 @@
-button {
+.fav {
   height: 0;
   border: none;
-}
-
-.fav {
   margin-top: 1rem;
   font-size: 2rem;
   cursor: pointer;
