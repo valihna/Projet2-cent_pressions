@@ -34,6 +34,9 @@ function NavBar() {
         <Link className="home" to="/" onClick={handleClick}>
           <h2>HOME</h2>
         </Link>
+        <Link className="home" to="/basket">
+          <h2>MY CART</h2>
+        </Link>
       </div>
     </div>
   );

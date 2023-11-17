@@ -11,8 +11,16 @@ export function BeerProvider({ children }) {
 
   const [favorites, setFavorites] = useState(initialFavorites);
 
+  const initialBasket = localStorage.getItem("Basket")
+    ? JSON.parse(localStorage.getItem("Basket"))
+    : [];
+
+  const [baskets, setBaskets] = useState(initialBasket);
+
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    localStorage.setItem("basket", JSON.stringify(baskets));
   }, [favorites]);
 
   const manageFavorites = (beerId) => {
@@ -23,8 +31,24 @@ export function BeerProvider({ children }) {
     }
   };
 
+  const manageBasket = (beerId) => {
+    if (baskets.some((beer) => beer.beerId === beerId)) {
+      // peuton passer plusieurs props?(price, name,price_per_liter)
+      setBaskets(baskets.filter((beer) => beer.beerId !== beerId));
+    } else {
+      setBaskets([
+        ...baskets,
+        {
+          beerId,
+        },
+      ]);
+    }
+  };
+
   return (
-    <BeerContext.Provider value={{ favorites, manageFavorites }}>
+    <BeerContext.Provider
+      value={{ favorites, manageFavorites, baskets, manageBasket }}
+    >
       {children}
     </BeerContext.Provider>
   );
