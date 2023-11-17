@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import AddBasket from "./AddBasket";
 import "./BeerCard.css";
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies, import/order
 import { HiOutlineInformationCircle } from "react-icons/hi";
 
 import FavButton from "./FavButton";
@@ -35,6 +36,7 @@ function BeerCard({ beer }) {
         <p className="volume">{beer.volume_value}L</p>
       </div>
       <p className="price">{beer.price_per_liter}$/L</p>
+      <AddBasket beerId={beer.id} />
     </div>
   );
 }
