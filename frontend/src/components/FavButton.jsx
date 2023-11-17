@@ -6,14 +6,13 @@ import "./FavButton.css";
 function FavButton({ beerId }) {
   const { favorites, manageFavorites } = useBeerContext();
 
-  const isFavorite = favorites.includes(beerId);
   return (
     <button
       type="button"
       className="fav"
       onClick={() => manageFavorites(beerId)}
     >
-      {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
+      {favorites.includes(beerId) ? <AiFillHeart /> : <AiOutlineHeart />}
     </button>
   );
 }

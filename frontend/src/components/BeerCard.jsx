@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import "./BeerCard.css";
 import { Link, useLocation } from "react-router-dom";
 
+import "./BeerCard.css";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { HiOutlineInformationCircle } from "react-icons/hi";
 

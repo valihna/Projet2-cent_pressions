@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-/* import "./Types.css"; */
 import "./FilterOption.css";
 
 function FilterOption({ label, onFilterChange }) {
