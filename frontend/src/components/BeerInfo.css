@@ -11,10 +11,10 @@
 }
 
 .beer-info-title {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 12fr 2fr 1fr;
+  grid-gap: 1rem;
   align-items: center;
-  justify-content: space-around;
   padding: 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -26,18 +26,23 @@
 
 .beer-info-title h2 {
   font-size: 1.5rem;
+  margin-left: 25%;
   margin-bottom: 1rem;
 }
 
 .beer-info-title h3 {
   font-size: 1.2rem;
+  margin-left: 25%;
   font-weight: lighter;
   font-style: italic;
 }
 
 .beer-info-image-mini {
   height: 8rem;
-  margin-left: 1rem;
+}
+
+.beer-info-fav {
+  margin-bottom: 4rem;
 }
 
 .beer-info-body {
@@ -45,6 +50,7 @@
   flex-direction: row;
   align-items: flex-start;
   margin: auto;
+  width: 100%;
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: white;
 }
@@ -80,15 +86,18 @@
   }
 
   .beer-info-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 15fr 1fr;
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .beer-info-image-mini {
     display: none;
+  }
+
+  .beer-info-fav svg {
+    font-size: 3rem;
   }
 
   .beer-info-title h2 {

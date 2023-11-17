@@ -1,23 +1,21 @@
-import "./SideBar.css";
 import React from "react";
-import Type from "./Types";
+import FilterOption from "./FilterOption";
+import "./SideBar.css";
 
 function SideBar({ onFilterChange }) {
   const types = ["Braun", "Black", "IPA", "Abbey", "Blonde"];
 
-  const handleTypeFilterChange = (type, isChecked) => {
-    onFilterChange(type, isChecked);
-  };
-
   return (
     <div className="side">
-      <div className="all_input">
-        <h3 className="types_of_beer">types of beers :</h3>
+      <div className="all-input">
+        <h3 className="filter-title">Favorites beers :</h3>
+        <FilterOption label="Favorites" onFilterChange={onFilterChange} />
+        <h3 className="filter-title">Types of beers :</h3>
         {types.map((type) => (
-          <Type
+          <FilterOption
             key={type}
-            type={type}
-            onFilterChange={handleTypeFilterChange}
+            label={type}
+            onFilterChange={onFilterChange}
           />
         ))}
       </div>

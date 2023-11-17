@@ -4,11 +4,13 @@ import BeerList from "./components/BeerList";
 import Title from "./components/Title";
 import NavBar from "./components/Navbar";
 import SideBar from "./components/SideBar";
+import { useBeerContext } from "./contexts/context";
 import "./App.css";
 
 function App() {
   const allBeers = useLoaderData();
   const [selectedTypes, setSelectedTypes] = useState([]);
+  const { favorites } = useBeerContext();
 
   const handleFilterChange = (type, isChecked) => {
     if (isChecked) {
@@ -22,21 +24,21 @@ function App() {
 
   const getSelection = () => {
     const selection = allBeers.filter(
-      (beer) => selectedTypes.length === 0 || selectedTypes.includes(beer.type)
+      (beer) =>
+        selectedTypes.length === 0 ||
+        selectedTypes.includes(beer.type) ||
+        favorites.includes(beer.id)
     );
 
-    return selectedTypes.length > 0
-      ? selection.sort((a, b) => {
-          return a.type > b.type ? -1 : 1;
-        })
-      : selection;
+    return selection.sort((a, b) => {
+      return a.type > b.type ? -1 : 1;
+    });
   };
 
   return (
     <div>
       <NavBar />
       <Title />
-
       <div className="app">
         <BeerList beers={getSelection()} />
         <SideBar onFilterChange={handleFilterChange} />
