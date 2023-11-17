@@ -7,6 +7,7 @@ export default function AddBasket({ beerId }) {
 
   return (
     <button type="button" className="cart" onClick={() => manageBasket(beerId)}>
+      <div>ADD TO CART</div>
       <TiShoppingCart
         color={baskets.some((beer) => beer.beerId === beerId) ? "red" : "black"}
       />
