@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
   const allBeers = useLoaderData();
   const [selectedTypes, setSelectedTypes] = useState([]);
+  const [searchedBeers, setSearchedBeers] = useState([]);
 
   const handleFilterChange = (type, isChecked) => {
     if (isChecked) {
@@ -19,21 +20,28 @@ function App() {
       );
     }
   };
+  const handleSearch = (searchValue) => {
+    const filteredBeers = allBeers.filter((beer) =>
+      beer.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setSearchedBeers(filteredBeers);
+  };
 
   let groupedBeers;
 
   if (selectedTypes.length > 0) {
     groupedBeers = selectedTypes.reduce((grouped, type) => {
-      const typeBeers = allBeers.filter((beer) => beer.type === type);
+      const typeBeers = searchedBeers.filter((beer) => beer.type === type);
       return grouped.concat(typeBeers);
     }, []);
   } else {
-    groupedBeers = allBeers;
+    groupedBeers = searchedBeers.length > 0 ? searchedBeers : allBeers;
   }
 
   return (
     <div>
-      <NavBar />
+      <NavBar onSearch={handleSearch} />
+
       <Title />
 
       <div className="app">

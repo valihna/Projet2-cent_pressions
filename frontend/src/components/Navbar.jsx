@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import SearchBar from "./SearchBar";
 import "./Navbar.css";
 
-function NavBar() {
+function NavBar({ onSearch }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ function NavBar() {
         >
           <h2>HOME</h2>
         </Link>
+        <SearchBar onSearch={onSearch} />
       </div>
     </div>
   );
