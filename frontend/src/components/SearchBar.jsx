@@ -9,7 +9,6 @@ function SearchBar({ onSearch }) {
     const updatedValue = event.target.value;
     setValue(updatedValue);
 
-    // Appel de la fonction de filtrage avec la valeur de recherche
     onSearch(updatedValue);
   };
 
