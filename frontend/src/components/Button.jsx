@@ -1,9 +1,10 @@
 import React from "react";
+import "./Button.css";
 
 function Button() {
   return (
     <div>
-      <input type="button" value="Validate the Basket" />
+      <input className="validate" type="button" value="Validate the Basket" />
       {/* <button onClick={handleClick}></button> */}
     </div>
   );

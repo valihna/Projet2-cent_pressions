@@ -41,7 +41,7 @@
   height: 8rem;
 }
 
-.beer-info-fav {
+.beer-info-buttons {
   margin-bottom: 4rem;
 }
 
@@ -96,7 +96,7 @@
     display: none;
   }
 
-  .beer-info-fav svg {
+  .beer-info-buttons svg {
     font-size: 3rem;
   }
 
