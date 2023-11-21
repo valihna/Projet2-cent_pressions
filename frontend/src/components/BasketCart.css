@@ -82,13 +82,14 @@
   .beer-one {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-image: linear-gradient(to bottom, #fff2cc, #fff2cc);
     background-size: 100% 20%;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 10px 5px black;
     border-radius: 10px;
     margin: 3rem;
-    width: 70%;
+    width: 60%;
     height: 40rem;
   }
 
@@ -100,15 +101,14 @@
   }
 
   .beer-one-left > img {
-    width: 6rem;
-    margin-left: 5rem;
+    width: 8rem;
   }
 
   .beer-one-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 6rem;
+    margin-left: 10rem;
     margin-right: 1rem;
     font-size: 2rem;
   }
