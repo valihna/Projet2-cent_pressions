@@ -37,14 +37,12 @@ function App() {
     }
 
     if (selectedTypes.length > 0) {
-      // Filtrer par types sélectionnés, même si une recherche a été effectuée
       filteredBeers = filteredBeers.filter((beer) =>
         selectedTypes.includes(beer.type)
       );
     }
 
     if (selectedTypes.length > 1) {
-      // Si plusieurs types sont sélectionnés, regrouper par type
       const groupedByType = {};
       filteredBeers.forEach((beer) => {
         if (!groupedByType[beer.type]) {
@@ -53,7 +51,6 @@ function App() {
         groupedByType[beer.type].push(beer);
       });
 
-      // Concaténer les groupes dans l'ordre alphabétique des types
       const typesInOrder = selectedTypes.sort();
       filteredBeers = typesInOrder.flatMap((type) => groupedByType[type]);
     }
@@ -62,6 +59,7 @@ function App() {
   };
 
   const groupedBeers = getGroupedBeers();
+
   return (
     <div>
       <NavBar onSearch={handleSearch} />

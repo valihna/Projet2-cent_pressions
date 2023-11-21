@@ -11,6 +11,7 @@
 .search-bar {
   background-color: transparent;
   border: none;
+  outline: none;
   height: 100%;
   font-size: 1.25rem;
   width: 100%;
