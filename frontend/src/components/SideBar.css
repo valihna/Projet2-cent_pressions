@@ -1,20 +1,22 @@
 .side {
-  background: url("../assets/image-navbar.png");
-  width: 6.5rem;
+  background: url("../public/image-navbar.png");
+  width: 7rem;
   color: aliceblue;
   position: sticky;
   left: 0;
   top: 4rem;
   height: calc(100vh - 4rem);
-
   bottom: 0;
 }
-h3 {
+
+.filter-title {
   margin: 1.3rem;
 }
-.tout-input {
+
+.all-input {
   margin-top: 3rem;
 }
+
 @media screen and (min-width: 720px) {
   .side {
     width: 13rem;

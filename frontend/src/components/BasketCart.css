@@ -1,0 +1,78 @@
+/* Basket.css */
+
+.basketBody {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: white;
+  height: 100%;
+  background-position: center;
+  display: grid;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 0.5rem;
+  width: auto;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px black;
+}
+
+.beer-one {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: #8a5416d8;
+  background-image: linear-gradient(to bottom, #fff2cc, #fff2cc);
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px 5px black;
+  border-radius: 10px;
+  padding: 5rem;
+  margin: 3rem;
+  width: 15rem;
+  height: 25rem;
+}
+
+.beer-one-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 10%;
+}
+
+.beer-one-left > img {
+  width: 100px;
+  margin: auto;
+}
+
+.beer-one-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.beer-one-right > h3 {
+  align-items: flex-end;
+}
+
+.basket-footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.down-footer {
+  margin-top: 10px;
+  margin: 3px;
+}

@@ -1,0 +1,21 @@
+.filter-option {
+  margin: 1rem;
+}
+
+.filter-checkbox {
+  margin-right: 0.2rem;
+}
+
+.label {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 720px) {
+  .filter-option {
+    margin: 3rem;
+  }
+
+  .filter-checkbox {
+    margin-right: 1rem;
+  }
+}
