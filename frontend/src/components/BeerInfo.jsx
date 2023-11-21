@@ -3,6 +3,7 @@ import "./BeerInfo.css";
 
 import BeerInfoContent from "./BeerInfoContent";
 import FavButton from "./FavButton";
+import AddBasket from "./AddBasket";
 
 function BeerInfo() {
   const selectedBeer = useLoaderData();
@@ -22,8 +23,9 @@ function BeerInfo() {
           src={selectedBeer.image_url}
           alt={selectedBeer.name}
         />
-        <div className="beer-info-fav">
+        <div className="beer-info-buttons">
           <FavButton beerId={selectedBeer.id} />
+          <AddBasket beerId={selectedBeer.id} />
         </div>
       </div>
       <div className="beer-info-body">

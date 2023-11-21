@@ -11,17 +11,19 @@ export function BeerProvider({ children }) {
 
   const [favorites, setFavorites] = useState(initialFavorites);
 
-  const initialBasket = localStorage.getItem("Basket")
-    ? JSON.parse(localStorage.getItem("Basket"))
+  const initialBasket = localStorage.getItem("basket")
+    ? JSON.parse(localStorage.getItem("basket"))
     : [];
 
   const [baskets, setBaskets] = useState(initialBasket);
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
-
-    localStorage.setItem("basket", JSON.stringify(baskets));
   }, [favorites]);
+
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(baskets));
+  }, [baskets]);
 
   const manageFavorites = (beerId) => {
     if (favorites.includes(beerId)) {
