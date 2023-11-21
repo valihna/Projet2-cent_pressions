@@ -27,17 +27,41 @@ function App() {
     setSearchedBeers(filteredBeers);
   };
 
-  let groupedBeers;
+  const getGroupedBeers = () => {
+    let filteredBeers;
 
-  if (selectedTypes.length > 0) {
-    groupedBeers = selectedTypes.reduce((grouped, type) => {
-      const typeBeers = searchedBeers.filter((beer) => beer.type === type);
-      return grouped.concat(typeBeers);
-    }, []);
-  } else {
-    groupedBeers = searchedBeers.length > 0 ? searchedBeers : allBeers;
-  }
+    if (searchedBeers.length > 0) {
+      filteredBeers = searchedBeers;
+    } else {
+      filteredBeers = allBeers;
+    }
 
+    if (selectedTypes.length > 0) {
+      // Filtrer par types sélectionnés, même si une recherche a été effectuée
+      filteredBeers = filteredBeers.filter((beer) =>
+        selectedTypes.includes(beer.type)
+      );
+    }
+
+    if (selectedTypes.length > 1) {
+      // Si plusieurs types sont sélectionnés, regrouper par type
+      const groupedByType = {};
+      filteredBeers.forEach((beer) => {
+        if (!groupedByType[beer.type]) {
+          groupedByType[beer.type] = [];
+        }
+        groupedByType[beer.type].push(beer);
+      });
+
+      // Concaténer les groupes dans l'ordre alphabétique des types
+      const typesInOrder = selectedTypes.sort();
+      filteredBeers = typesInOrder.flatMap((type) => groupedByType[type]);
+    }
+
+    return filteredBeers;
+  };
+
+  const groupedBeers = getGroupedBeers();
   return (
     <div>
       <NavBar onSearch={handleSearch} />
