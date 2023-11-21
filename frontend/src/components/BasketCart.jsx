@@ -5,6 +5,7 @@ import AddBasket from "./AddBasket";
 import "./BasketCart.css";
 
 import Button from "./Button";
+import ArticlesCart from "./ArticlesCart";
 
 function BasketCart() {
   const [carts, setCarts] = useState([]);
@@ -36,7 +37,7 @@ function BasketCart() {
           <div className="beer-one-right">
             <h3 className="name">{beer.name}</h3>
             <p className="price">{beer.price_per_liter} $/L</p>
-            <p className="subtotal">Subtotal</p>
+            <ArticlesCart />
             <AddBasket beerId={beer.id} />
           </div>
         </div>
