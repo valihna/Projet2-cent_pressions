@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import SearchBar from "./SearchBar";
 import "./Navbar.css";
 
-function NavBar() {
+function NavBar({ onSearch }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -34,6 +35,7 @@ function NavBar() {
         <Link className="home" to="/" onClick={handleClick}>
           <h2>HOME</h2>
         </Link>
+        <SearchBar onSearch={onSearch} />
         <Link className="home" to="/basket">
           <h2>MY CART</h2>
         </Link>
