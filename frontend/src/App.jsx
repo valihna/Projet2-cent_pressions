@@ -102,7 +102,7 @@ function App() {
       return selection.sort((a, b) => (a.type > b.type ? -1 : 1));
     }
 
-    return selection.sort((a, b) => (a.id > b.id ? -1 : 1));
+    return selection.sort((a, b) => (b.name > a.name ? -1 : 1));
   };
 
   return (
