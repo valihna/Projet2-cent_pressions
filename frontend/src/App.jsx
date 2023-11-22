@@ -64,12 +64,8 @@ function App() {
   const getSelection = () => {
     const groupedBeers = getGroupedBeers();
 
-    if (
-      searchedBeers.length === 0 &&
-      selectedTypes.length === 0 &&
-      favorites.length === 0
-    ) {
-      return allBeers.sort((a, b) => (a.id > b.id ? -1 : 1));
+    if (searchedBeers.length === 0 && selectedTypes.length === 0) {
+      return allBeers.sort((a, b) => (b.name > a.name ? -1 : 1));
     }
 
     let filteredBeers;
@@ -82,7 +78,6 @@ function App() {
         }
         groupedByType[beer.type].push(beer);
       });
-
       const typesInOrder = selectedTypes.sort();
       filteredBeers = typesInOrder.flatMap((type) => groupedByType[type]);
     } else {
@@ -107,7 +102,7 @@ function App() {
       return selection.sort((a, b) => (a.type > b.type ? -1 : 1));
     }
 
-    return selection.sort((a, b) => (a.id > b.id ? -1 : 1));
+    return selection.sort((a, b) => (b.name > a.name ? -1 : 1));
   };
 
   return (

@@ -42,7 +42,9 @@
 }
 
 .beer-info-buttons {
-  margin-bottom: 4rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .beer-info-body {

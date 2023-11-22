@@ -18,4 +18,8 @@
   .filter-checkbox {
     margin-right: 1rem;
   }
+
+  .label:hover {
+    text-decoration: underline;
+  }
 }
