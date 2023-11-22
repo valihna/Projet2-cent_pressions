@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Basket from "./pages/Basket";
-
-import { BeerProvider } from "./contexts/context";
+import axios from "axios";
 
 import App from "./App";
+import ContactPage from "./pages/ContactPage";
+import Basket from "./pages/Basket";
 import Beers from "./pages/Beers";
+
+import { BeerProvider } from "./contexts/context";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/basket",
     element: <Basket />,
+  },
+  {
+    path: "/contact",
+    element: <ContactPage />,
   },
 ]);
 

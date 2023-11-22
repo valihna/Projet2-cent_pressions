@@ -1,0 +1,53 @@
+@media screen and (min-width: 720px) {
+}
+.contact-container {
+  height: 500px;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  width: 20%;
+  padding: 5px;
+  box-shadow: 0px 0px 10px 5px black;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.contact-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-textarea {
+  resize: both;
+  min-height: 150px;
+  max-width: 200px;
+  max-width: 300px;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+label input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5%;
+}
+.input-invalid {
+  border: red solid;
+}
+
+.textarea-invalid {
+  border: red solid;
+}
