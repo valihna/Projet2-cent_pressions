@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useBeerContext } from "../contexts/context";
 import AddBasket from "./AddBasket";
-import "./BasketCart.css";
 
 import Button from "./Button";
+import ArticlesCart from "./ArticlesCart";
+import "./BasketCart.css";
 
 function BasketCart() {
   const [carts, setCarts] = useState([]);
@@ -36,15 +37,13 @@ function BasketCart() {
           <div className="beer-one-right">
             <h3 className="name">{beer.name}</h3>
             <p className="price">{beer.price_per_liter} $/L</p>
-            <p className="subtotal">Subtotal</p>
+            <ArticlesCart />
             <AddBasket beerId={beer.id} />
           </div>
         </div>
       ))}
       <div className="basket-footer">
         <div className="total-container">
-          <p className="total">Total</p>
-          <span>$</span>
           <div className="down-footer">
             <Button />
           </div>
