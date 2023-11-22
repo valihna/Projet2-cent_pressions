@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useBeerContext } from "../contexts/context";
 import AddBasket from "./AddBasket";
-import "./BasketCart.css";
 
 import Button from "./Button";
 import ArticlesCart from "./ArticlesCart";
+import "./BasketCart.css";
 
 function BasketCart() {
   const [carts, setCarts] = useState([]);
@@ -44,8 +44,6 @@ function BasketCart() {
       ))}
       <div className="basket-footer">
         <div className="total-container">
-          <p className="total">Total</p>
-          <span>$</span>
           <div className="down-footer">
             <Button />
           </div>
