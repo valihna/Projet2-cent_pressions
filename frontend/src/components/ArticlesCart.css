@@ -1,3 +1,6 @@
-.counter {
-  width: 40rem;
+.counter-button {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
 }

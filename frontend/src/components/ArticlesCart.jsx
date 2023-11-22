@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./ArticlesCart.css";
 
 function ArticlesCart() {
@@ -17,12 +16,20 @@ function ArticlesCart() {
     };
 
     return (
-      <div className="counter">
-        <p>Quantity: {count}</p>
-        <button type="button" onClick={incrementCounter}>
+      <div>
+        <p className="counter">Quantity: {count}</p>
+        <button
+          className="counter-button"
+          type="button"
+          onClick={incrementCounter}
+        >
           +1
         </button>
-        <button type="button" onClick={decrementCounter}>
+        <button
+          className="counter-button"
+          type="button"
+          onClick={decrementCounter}
+        >
           -1
         </button>
       </div>
