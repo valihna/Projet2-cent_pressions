@@ -39,6 +39,9 @@ function NavBar({ onSearch }) {
           <Link className="nav-link" to="/basket">
             <h2>MY CART</h2>
           </Link>
+          <Link className="nav-link" to="/contact">
+            <h2>CONTACT</h2>
+          </Link>
         </div>
         <SearchBar onSearch={onSearch} />
       </div>

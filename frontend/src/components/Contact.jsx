@@ -44,7 +44,7 @@ function Contact() {
 
   return (
     <div className="contact-container">
-      <h4>Contact form </h4>
+      <h4 className="contact-form">Contact form </h4>
       <form onSubmit={(event) => sendMail(event)}>
         <label>
           Lastname
@@ -52,6 +52,7 @@ function Contact() {
             type="text"
             name="lastname"
             placeholder="Lastname"
+            className="contact-input"
             required
             value={lastName}
             onChange={(event) => setLastName(event.target.value)}
@@ -63,6 +64,7 @@ function Contact() {
             type="text"
             name="firstname"
             placeholder="Firstname"
+            className="contact-input"
             required
             value={firstName}
             onChange={(event) => setFistName(event.target.value)}
@@ -75,6 +77,7 @@ function Contact() {
             type="text"
             name="subject"
             placeholder="The subject of your message"
+            className="contact-input"
             required
             value={subject}
             onChange={(event) => setSubject(event.target.value)}
