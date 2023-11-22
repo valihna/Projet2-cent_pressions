@@ -32,13 +32,15 @@ function NavBar({ onSearch }) {
         <h1 className="navbar-title-site">CENT PRESSIONS</h1>
       </div>
       <div className={isScrolled ? "navbar-menu sticky" : "navbar-menu"}>
-        <Link className="home" to="/" onClick={handleClick}>
-          <h2>HOME</h2>
-        </Link>
+        <div className="navbar-links">
+          <Link className="nav-link" to="/" onClick={handleClick}>
+            <h2>HOME</h2>
+          </Link>
+          <Link className="nav-link" to="/basket">
+            <h2>MY CART</h2>
+          </Link>
+        </div>
         <SearchBar onSearch={onSearch} />
-        <Link className="home" to="/basket">
-          <h2>MY CART</h2>
-        </Link>
       </div>
     </div>
   );

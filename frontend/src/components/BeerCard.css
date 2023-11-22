@@ -1,15 +1,27 @@
 .beer-item {
   width: 13rem;
-  height: 25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 27rem;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
   margin: 2rem;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px black;
   background-image: linear-gradient(to bottom, #fff2cc, #fff2cc);
   background-size: 100% 20%;
   background-repeat: no-repeat;
+}
+
+.beer-item-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-item-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .beer-item img {
@@ -30,25 +42,40 @@
   color: black;
 }
 
-.name {
-  margin: 5px;
+.name-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.type {
-  margin: 0;
-  display: flex;
-  justify-content: center;
+.name {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .tagline {
-  margin-top: 5px;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-style: italic;
 }
 
 .abv-volume {
   width: 10rem;
   height: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
+}
+
+@media screen and (min-width: 1024px) {
+  .beer-item {
+    width: 15rem;
+  }
 }
