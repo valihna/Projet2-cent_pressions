@@ -1,16 +1,12 @@
-@media screen and (min-width: 720px) {
-}
 .contact-container {
-  height: 500px;
+  height: 700px;
   margin: auto;
-  position: relative;
   top: 20px;
   left: 0px;
   display: flex;
   flex-direction: column;
   width: 13rem;
   align-items: center;
-  justify-content: center;
   text-align: center;
   box-sizing: border-box;
   width: 20%;
@@ -19,18 +15,24 @@
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
+.contact-form {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
 .contact-input {
   box-sizing: border-box;
   width: 100%;
   padding: 5px;
+  margin-bottom: 5%;
   flex-direction: column;
   text-align: center;
 }
+
 .contact-textarea {
-  resize: both;
-  min-height: 150px;
-  max-width: 200px;
-  max-width: 300px;
+  resize: none;
+  width: 90%;
+  height: 15rem;
   text-align: center;
   align-items: center;
   box-sizing: border-box;
@@ -38,16 +40,16 @@
   padding: 5px;
 }
 
-label input {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 5%;
-}
 .input-invalid {
   border: red solid;
 }
 
 .textarea-invalid {
   border: red solid;
+}
+
+@media screen and (max-width: 720px) {
+  .contact-container {
+    width: 90%;
+  }
 }
