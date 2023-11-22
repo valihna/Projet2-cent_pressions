@@ -1,0 +1,51 @@
+.cart {
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 0.3rem;
+  border-width: 0;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  text-wrap: wrap;
+  height: 2.5rem;
+  justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.cart:hover {
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.cart svg {
+  font-size: 1.5rem;
+}
+
+.cart-title {
+  margin-right: 0.5rem;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .cart {
+    height: 2.5rem;
+  }
+
+  .cart svg {
+    font-size: 1.5rem;
+  }
+
+  .cart-title {
+    margin-right: 1rem;
+  }
+}
