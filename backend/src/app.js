@@ -115,7 +115,6 @@ app.get("*", (req, res) => {
   res.sendFile(`${reactBuildPath}/index.html`);
 });
 
-
 /* ************************************************************************* */
 
 // Middleware for Error Logging (Uncomment to enable)
