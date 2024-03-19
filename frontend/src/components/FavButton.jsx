@@ -1,6 +1,5 @@
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useBeerContext } from "../contexts/context";
-
 import "./FavButton.css";
 
 function FavButton({ beerId }) {
